@@ -16,30 +16,47 @@ A complete end-to-end pipeline for detecting DeepFakes using:
 
 ## Project Directory Structure
 
-deepfake_predictor/
-├── data/
-│   ├── raw_videos/            # Input .mp4 videos (real/fake)
-│   ├── extracted_frames/      # Cropped face images
-│   ├── audio/                 # Extracted audio (.wav)
-│   ├── spectrograms/          # Spectrogram images (.png)
-│   └── labels.csv             # id,label,motion format
-│
-├── scripts/
-│   └── extract_and_label.py   # Preprocess and generate labels
+deepfake_predictor:
+
+├── data:
+
+   ├── raw_videos:            # Input .mp4 videos (real/fake)
+   
+   ├── extracted_frames:      # Cropped face images
+   
+   ├── audio:                 # Extracted audio (.wav)
+   
+   ├── spectrograms:          # Spectrogram images (.png)
+   
+   ├── labels.csv             # id,label,motion format
+
+├── scripts:
+
+   ├── extract_and_label.py   # Preprocess and generate labels
+   
 ├── train.py                   # Train multimodal detector
+
 ├── eval.py                    # Evaluate on clean + adversarial distortions
+
 ├── inference.py               # Predict real/fake on new video
-│
-├── models/
-│   ├── vision/vision_model.py
-│   ├── audio/audio_model.py
-│   └── fusion/fusion_model.py
-│
-├── utils/
-│   ├── video_utils.py
-│   ├── audio_utils.py
-│   └── motion_utils.py
-│
+
+├── models:
+
+   ├── vision/vision_model.py
+   
+   ├── audio/audio_model.py
+   
+   ├── fusion/fusion_model.py
+
+├── utils:
+
+   ├── video_utils.py
+   
+   ├── audio_utils.py
+   
+   └── motion_utils.py
+
 ├── requirements.txt
-└── README.md
+
+├── README.md
 
