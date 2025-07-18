@@ -54,7 +54,7 @@ deepfake_predictor:
    
    ├── audio_utils.py
    
-   └── motion_utils.py
+   ├── motion_utils.py
 
 ├── requirements.txt
 
